@@ -18,4 +18,4 @@ let alerte = function () {
         this.className = "standard";
       }
     });
-  });
+  }); 
