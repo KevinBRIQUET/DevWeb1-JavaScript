@@ -1,5 +1,33 @@
+body {
+    background-color: #f2e1a8;
+}
+
 h1 {
     text-align: center;
+    font-size: 40px;
+}
+
+.ajouter_tache {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.titre-colonne {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.titre-colonne h2 {
+    text-align: center;
+    width: 30%; 
+    margin: 0;
+}
+
+
+section {
+    margin: 25px;
 }
 
 
@@ -14,6 +42,15 @@ h1 {
     border: 1px solid black;
     border-radius: 15px;
     padding: 15px;
-    background-color: silver;
+    background-color: #ccbe8e;
     height: 100%;
 }
+
+.bulleTache {
+    padding: 5px;
+    margin: 3px;
+    background-color: #edeff6;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+

@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" class="style css">
-<title>Todolist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Todolist</title>
 </head>
 <body>
     
+
+<section>
 <h1>Todolist en JavaScript</h1>
 
-<input type="text" id="tache" placeholder="Saisissez votre tâche">
-
+<div class="ajouter_tache">
+<input type="text" id="tache" maxlength="40" placeholder="Saisissez votre tâche">
 <button id="ajouter">Ajouter</button>
+</div>
+
+<div class="titre-colonne">
+<h2>À faire</h2>
+<h2>En cours</h2>
+<h2>Terminé</h2>
+</div>
 
 <main class="container">
-
-<div class="colonne"></div>
-<div class="colonne"></div>
-<div class="colonne"></div>
-
-
+<div id="aFaire" class="colonne"></div>
+<div id="enCours" class="colonne"></div>
+<div id="termine" class="colonne"></div>
 </main>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
+</section>
 </body>
 </html>
