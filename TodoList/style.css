@@ -1,10 +1,39 @@
 body {
-    background-color: #f2e1a8;
+    background-image: url("ressources/paysage.png");
+    background-size: cover; 
+    margin: 25px;
+
 }
+
+.en-tete {
+    border: 1px solid black;
+    border-radius: 100px;
+    margin: 30px;
+    background-color: #5b4da9;
+    background-image: url("ressources/ileflotante.png");
+    background-size: cover; 
+
+
+}
+
+
 
 h1 {
     text-align: center;
     font-size: 40px;
+    font-family: Trebuchet MS;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+#tache {
+    width: 50%;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    border: none;
 }
 
 .ajouter_tache {
@@ -12,6 +41,23 @@ h1 {
     margin: 20px;
     padding: 20px;
 }
+
+#ajouter {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1d6d20;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+#ajouter:hover {
+    background-color: #45a049;
+}
+
 
 .titre-colonne {
     display: flex;
@@ -23,12 +69,11 @@ h1 {
     text-align: center;
     width: 30%; 
     margin: 0;
+    font-family: Arial;
 }
 
 
-section {
-    margin: 25px;
-}
+
 
 
 .container {
@@ -39,11 +84,16 @@ section {
 }
 
 .colonne  {
-    border: 1px solid black;
+    border: 2px solid rgb(10, 10, 93);
     border-radius: 15px;
     padding: 15px;
-    background-color: #ccbe8e;
+    background-color: #8b8d9692;
     height: 100%;
+    transition: background-color 0.3s ease
+}
+
+.colonne:hover {
+    background-color: #8b8d96; 
 }
 
 .bulleTache {

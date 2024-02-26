@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,36 @@
 
     <title>Todolist</title>
 </head>
+
 <body>
-    
 
-<section>
-<h1>Todolist en JavaScript</h1>
 
-<div class="ajouter_tache">
-<input type="text" id="tache" maxlength="40" placeholder="Saisissez votre tâche">
-<button id="ajouter">Ajouter</button>
-</div>
+    <section>
+        <div class="en-tete">
 
-<div class="titre-colonne">
-<h2>À faire</h2>
-<h2>En cours</h2>
-<h2>Terminé</h2>
-</div>
+            <h1>Todolist en JavaScript</h1>
 
-<main class="container">
-<div id="aFaire" class="colonne"></div>
-<div id="enCours" class="colonne"></div>
-<div id="termine" class="colonne"></div>
-</main>
+            <div class="ajouter_tache">
+                <input type="text" id="tache" maxlength="40" placeholder="Saisissez votre tâche">
+                <button id="ajouter">Ajouter</button>
+            </div>
+        </div>
 
-<script src="main.js"></script>
-</section>
+        <div class="titre-colonne">
+            <h2>À faire</h2>
+            <h2>En cours</h2>
+            <h2>Terminé</h2>
+        </div>
+
+
+        <main class="container">
+            <div id="aFaire" class="colonne"></div>
+            <div id="enCours" class="colonne"></div>
+            <div id="termine" class="colonne"></div>
+        </main>
+
+        <script src="main.js"></script>
+    </section>
 </body>
+
 </html>

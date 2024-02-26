@@ -44,7 +44,7 @@ monBoutton.addEventListener('click', function() {
         let deleteIcon = document.createElement("i");
         deleteIcon.classList.add("fas", "fa-trash");
         deleteIcon.style.cursor = "pointer";
-        deleteIcon.style.marginLeft = "10px"; // Ajoute un peu d'espace entre les flèches et la poubelle
+        deleteIcon.style.marginLeft = "10px"; 
         deleteIcon.addEventListener('click', function() {
             newDiv.remove();
         });
