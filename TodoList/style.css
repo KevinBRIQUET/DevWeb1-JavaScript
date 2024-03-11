@@ -2,6 +2,7 @@ body {
     background-image: url("ressources/paysage.png");
     background-size: cover; 
     margin: 25px;
+    background-repeat: no-repeat;
 
 }
 
@@ -12,6 +13,8 @@ body {
     background-color: #5b4da9;
     background-image: url("ressources/ileflotante.png");
     background-size: cover; 
+    background-repeat: no-repeat;
+
 
 
 }

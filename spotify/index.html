@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Info</title>
+</head>
+<body>
+    <h1>Playlist spotify de Kevin</h1>
+    <div id="spotify-info"></div>
+
+    <h2>Playlist Spotify</h2>
+    <div id="spotify-playlist"></div>
+
+    <script>
+        // Récupérer les informations utilisateur depuis l'API Spotify
+        const token = 'BQCeRjoM0WXlfhmqVMkCp5gShxeXc3PG6E82a4cdYnYdG6meuO3DQENHojl1wyBgIQxm7XV7mDrheV6OQHUwDLwF439r7NMITR8iXlA2-1VioHTBnnxr1I6IcXhafvtm_7vMiigBwbfH5O4N7sePKMk5Fyb76sPyALkhcUgUWeAUxXWUC0oHovofNOkilZE1ZXdMYYPnkMXAzCWiT9nN_FwHNZBlLzFi0TneAYy2f9T4G9Q0EyFCcedRcRyq75CDxrUmyCVuxWe2by2mHc0e9k5b';
+
+        fetch('https://api.spotify.com/v1/me', {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Formater les données JSON pour l'utilisateur
+            const userInfo = {
+                'Nom': data.display_name,
+
+                // Ajoutez d'autres informations que vous souhaitez afficher
+            };
+
+            // Afficher les données sur la page HTML
+            const spotifyInfoDiv = document.getElementById('spotify-info');
+            for (const [key, value] of Object.entries(userInfo)) {
+                spotifyInfoDiv.innerHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+            }
+        })
+        .catch(error => console.error('Erreur lors de la récupération des données Spotify:', error));
+
+        // Ajouter la playlist Spotify
+        const playlistId = '3YdWMoTsjCziVZI994n8ms';
+        const spotifyPlaylistDiv = document.getElementById('spotify-playlist');
+        spotifyPlaylistDiv.innerHTML = `<iframe title="Spotify Embed: Recommendation Playlist" src="https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+    </script>
+</body>
+</html>
