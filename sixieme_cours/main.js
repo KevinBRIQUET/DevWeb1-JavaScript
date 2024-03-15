@@ -1,3 +1,31 @@
+class media {
+    constructor(titre, genre, realisateur) {
+        this.titre = titre
+        this.genre = genre
+        this.realisateur = realisateur
+    }
+    play() {
+        console.log("Cette oeuvre de " + this.genre)
+        console.log("se , nomme " + this.titre)
+        console.log(", et réalisée par  " + this.genre)
+
+    }
+}
+
+class film extends media {
+
+}
+
+class serie extends media {
+    constructor (titre, genre,  realisateur, annee, duree){
+        super(titre, genre, realisateur)
+        this.duree = duree
+        this.annee = annee
+    }
+}
+
+
+
 // declater un objet
 let personne = {
     // proprieter
