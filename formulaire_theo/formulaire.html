@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .error input{
+            border-color: red; 
+        }
+        .error-message{
+            color: red;
+            display: none;
+        }
+
+        .error .error-message{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post" id="myForm">
+        <div class="input-group">
+            <input type="text" name="lastname" placeholder="Nom" data-required>
+            <div class="error-message">Le Nom est obligatoire</div>
+        </div> 
+        
+        <div class="input-group">
+            <input type="text" name="firstname" placeholder="Prénom" data-required>
+            <div class="error-message">Le Prénom est obligatoire</div>
+        </div> 
+
+        <div class="input-group">
+            <input type="text" name="lastname" placeholder="Adresse" data-required>
+            <div class="error-message">L'Adresse est obligatoire</div>
+        </div> 
+
+        <input type="submit" name="form-submit-btn" value="Envoyer">
+    </form>
+
+    <script>
+        const myForm = document.querySelector('#myForm');
+
+        myForm.addEventListener('submit', function(e) {
+            e.preventDefault();         
+            if(checkFormRequiredFields(this) === true)
+            {
+                this.submit();
+            }
+        });
+
+        function checkFormRequiredFields(formElement)
+        {
+            const requiredFields = formElement.querySelectorAll('[data-required]');
+            let isValid = true;
+            requiredFields.forEach(requiredField => {
+                if(requiredField.value === '')
+                {
+                    requiredField.parentElement.classList.add('error');
+                    isValid = false;
+                }
+                else
+                {
+                    requiredField.parentElement.classList.remove('error');
+                }
+            })
+            return isValid;
+        }
+    </script>
+</body>
+</html>

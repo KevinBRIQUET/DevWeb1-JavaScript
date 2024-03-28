@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+tr:nth-child(3n+1) td {
+    border-top: 2px solid #000;
+}
+
+tr:nth-child(3n) td {
+    border-bottom: 2px solid #000;
+}
+
+td:nth-child(3n+1) {
+    border-left: 2px solid #000;
+}
+
+td:nth-child(3n) {
+    border-right: 2px solid #000;
+}
+
+.subgrid {
+    border: 2px solid #000;
+}
+
+.erreurC { background-color: orange;}
+.erreurL { background-color: orange;}
+.erreurT { background-color: orange;}
